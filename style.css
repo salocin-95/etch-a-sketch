@@ -4,12 +4,37 @@
 
 body {
     font-family: 'Roboto';
-    margin: 0;
+    margin: 0 auto;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 .container {
-    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.header {
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
-    width: 80%;
+}
+
+.main {
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    background-color: tomato;
+    margin-top: 100%;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
 }
