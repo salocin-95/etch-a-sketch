@@ -1,0 +1,1 @@
+const gridElement = document.querySelector('.grid-element')

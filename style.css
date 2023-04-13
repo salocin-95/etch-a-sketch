@@ -15,22 +15,53 @@ body {
 
 .title {
     text-align: center;
+    padding: 1rem;
+    font-size: 56px;
 }
 
-.row {
+button,
+input {
+  width: 100%;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.main {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.col {
+.settings {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .square-container {
     width: 516px;
     height: 516px;
-    border: 2px solid black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-shrink: 0;
+}
+
+.color-picker {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.btn {
+    width: 250px;
+    padding: 1rem 2rem;
 }
 
 .footer {
