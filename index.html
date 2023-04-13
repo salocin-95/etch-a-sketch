@@ -12,25 +12,36 @@
 </head>
 <body>
     <header class="header">
-        <h1 class="tittle">Etch-A-Sketch</h1>
+        <div class="container">
+            <h1 class="title">Etch-A-Sketch</h1>
+        </div>
     </header>
     <main class="main">
         <div class="container">
-            <div class="btn-container">
-                <div class="color">a</div>
-                <button class="btn">1</button>
-                <button class="btn">1</button>
-                <button class="btn">1</button>
-                <button class="btn">1</button>
-                <div class="slider">SLider</div>
-            </div>
-            <div class="screen">
-                <div class="pixels">
-                    1
+            <div class="row">
+                <div class="col">
+                    <div class="color-picker">
+                        Here goes a round button
+                    </div>
+                    <button class="btn">
+                        Color Mode
+                    </button>
+                    <button class="btn">
+                        Rainbow Mode
+                    </button>
+                    <button class="btn">
+                        Eraser Mode
+                    </button>
+                    <button class="btn">
+                        Clear
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="square-container">Square</div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="footer">By Rodrigo Nicolas</footer>
+    <footer class="footer container">By Rodrigo Nicolas</footer>
 </body>
 </html>
