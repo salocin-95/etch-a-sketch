@@ -44,7 +44,8 @@ input {
     gap: 2rem;
 }
 
-.square-container {
+.grid {
+    display: grid;
     width: 516px;
     height: 516px;
     color: white;
