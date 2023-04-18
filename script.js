@@ -1,29 +1,33 @@
-const grid = document.querySelector('.grid');
+const grid = document.querySelector('#grid');
 const gridElement = document.querySelector('.grid-element');
 const colorPicker = document.querySelector('.color-picker');
 const brush = document.querySelector('.brush-mode');
 const rainbow = document.querySelector('.rainbow-mode');
 const eraser = document.querySelector('.eraser-mode');
 const clear = document.querySelector('.clear');
-const sizeValue = document.querySelector('.size-value')
+const sizeBar = document.querySelector('#sizeSlider')
 
-// Get the slider element
-const slider = document.getElementById("sizeSlider");
+let size = 16;
 
-// Listen for the input event on the slider
-slider.addEventListener("input", function () {
-    // Get the value of the slider
-    const value = slider.value;
-    sizeValue.textContent(`${value}x${value}`)
+// Add grid-element to grid
+function createGrid() {
+    for (let i = 0; i < size * size; i++) {
+        const div = document.createElement('div');
+        div.classList.add('grid-element');
+        grid.appendChild(div);
+    }
+}
 
-    // Do something with the value (e.g. update a display)
-    console.log("Slider value: " + value);
+// This paints the grid.
+grid.addEventListener('mouseover', (event) => {
+    if (event.target.matches('.grid-element')) {
+        event.target.style.backgroundColor = 'black';
+    }
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
 });
 
-//Add to create grid
-/*grid-template-columns: repeat(62, 1fr);
-grid-template-rows: repeat(62, 1fr);*/
-
-const div = document.createElement('div');
-div.classList.add('grid-element')
-grid.appendChild(div)
+//Changes size of the grid
+sizeBar.addEventListener('input', (event) => {
+    size = event.target.value;
+    createGrid();
+})
