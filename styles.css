@@ -11,6 +11,7 @@ body {
 
 h1 {
     padding-top: 25%;
+    
 }
 
 p {
@@ -49,7 +50,27 @@ p {
 }
 
 #clear {
+    border: 1px solid black;
     margin: 50px;
+    padding: 5px 15px;
+    color: black;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px gray;
+
+}
+
+#clear:hover {
+    transform: scale(15px);
+    border: 1px solid black;
+    margin: 50px;
+    padding: 5px 15px;
+    color: black;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px gray;
 }
 
 footer {
