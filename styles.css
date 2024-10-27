@@ -10,8 +10,7 @@ body {
 }
 
 h1 {
-    padding-top: 25%;
-    
+    padding-top: 5%;
 }
 
 p {
@@ -58,11 +57,12 @@ p {
     background-color: white;
     border-radius: 5px;
     box-shadow:  2px 2px 5px gray;
+    transition: transform .2s;
 
 }
 
 #clear:hover {
-    transform: scale(15px);
+    transform: scale(1.1);
     border: 1px solid black;
     margin: 50px;
     padding: 5px 15px;
@@ -72,6 +72,19 @@ p {
     border-radius: 5px;
     box-shadow:  2px 2px 5px gray;
 }
+
+#clear:active {
+    border: 1px solid black;
+    transform: scale(1);
+    margin: 50px;
+    padding: 5px 15px;
+    color: black;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:  2px 2px 5px gray;
+}
+
 
 footer {
     width: 650px;
