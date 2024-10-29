@@ -40,8 +40,6 @@ body {
 }
 
 .grid-element {
-    width: 20px;
-    height: 20px;
     display: flex;
 }
 
