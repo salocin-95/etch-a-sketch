@@ -1,5 +1,10 @@
 const divContainer = document.querySelector(".grid-container");
-const clearBtn = document.getElementById("clear")
+const clearBtn = document.getElementById("clear");
+const gridSize = document.getElementById("grid-size");
+
+const gridSizeValue = () => {
+    console.log(gridSize.value);
+}
 
 const createGridElement = () => {
     const gridElement = document.createElement("div");
