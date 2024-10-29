@@ -1,9 +1,11 @@
 const divContainer = document.querySelector(".grid-container");
 const clearBtn = document.getElementById("clear");
 const gridSize = document.getElementById("grid-size");
+const gridSizeDisplay = document.querySelector(".grid-size-display");
 
 const gridSizeValue = () => {
     console.log(gridSize.value);
+    gridSizeDisplay.innerHTML = `<span>${gridSize.value}x${gridSize.value}</span>`
 }
 
 const createGridElement = () => {
@@ -18,18 +20,18 @@ const clearSketch = () => {
 
 // For every gridElement it should have a class that matches with an X and Y number so when the mouse is over the it changes the color according to its coordinates
 
-const createGrid = () => {
+/*const createGrid = () => {
     for (i = 1; i <= 16; i++) {  
         for (j = 1; j <= 16;j++) {
             createGridElement();
         };
     };
-};
+};*/
 
 
 console.log("imlinked");
 console.log(divContainer);
-createGrid();
+//createGrid();//
 
 const gridElement = document.querySelector(".grid-element");
 
@@ -47,7 +49,7 @@ document.addEventListener("mouseover", (event) => {
     }
 });
 
-clearBtn.addEventListener("click", clearSketch);
+//clearBtn.addEventListener("click", clearSketch);
 
 // Targets mouse poisiton
 // onmousemove = function(e){console.log("mouse location:", e.clientX, e.clientY)}

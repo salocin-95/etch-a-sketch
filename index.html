@@ -8,22 +8,32 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <main class="hero">
+        <div class="hero">
             <h1>Etch-a-Sketch</h1>
             <p><i>The Odin Project</i></p>
+        </div>
+
+        <main class="main">
+
+            
+            
+            <div class="grid-container">
+
+            </div>
+
+            <div class="options-container">
+                <br>
+                <input type="range" min="1" max="100" id="grid-size" oninput="gridSizeValue()" ><br>
+                <span>Grid Size: </span><span class="grid-size-display">16x16</span><br>
+                <div class="buttons-container">
+                    <button id="clear">CLEAR</button><br>
+                    <button id="eraser">ERASER</button><br>
+                    <button id="rainbow">RAINBOW</button><br>
+                </div>
+            </div>
+
         </main>
-
-        <div class="grid-container">
-
-        </div>
-
-        <div class="options-container">
-            <br>
-            <input type="range" min="16" max="100" id="grid-size" onchange="gridSizeValue()" ><br>
-            <button id="clear">Clear</button>
-        </div>
         
-
         <footer class="footer">
             <span class="footer">Rodrigo © Nicolas</span>
         </footer>
