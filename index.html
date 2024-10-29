@@ -12,13 +12,22 @@
             <h1>Etch-a-Sketch</h1>
             <p><i>The Odin Project</i></p>
         </main>
+
         <div class="grid-container">
 
         </div>
-        <button id="clear">Clear</button>
+
+        <div class="options-container">
+            <br>
+            <input type="range" min="16" max="100" id="grid-size" onchange="gridSizeValue()" ><br>
+            <button id="clear">Clear</button>
+        </div>
+        
+
         <footer class="footer">
             <span class="footer">Rodrigo © Nicolas</span>
         </footer>
+
     </div>
     <script src="app.js"></script>
 </body>
