@@ -58,6 +58,9 @@ body {
 .buttons-container {
     display: flex;
     flex-direction: column;
+    background-color: aqua;
+    box-shadow:  5px 5px 5px gray;
+    border-radius: 5px;
 }
 
 button {
