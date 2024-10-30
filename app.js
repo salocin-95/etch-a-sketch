@@ -9,20 +9,19 @@ const clearSketch = () => {
 
 // For every gridElement it should have a class that matches with an X and Y number so when the mouse is over the it changes the color according to its coordinates
 const createGrid = () => {
-    for (i = 1; i <= 16; i++) {  
-        for (j = 1; j <= 16;j++) {
+    for (i = 1; i <= parseInt(gridSize.value); i++) {  
+        for (j = 1; j <= parseInt(gridSize.value);j++) {
             createGridElement();
         };
     };
 }
 
-
 const createGridElement = () => {
     const gridElement = document.createElement("div");
     gridElement.classList.add("grid-element");
     divContainer.appendChild(gridElement);
-    gridElement.style.height = `41.25px`
-    gridElement.style.width = `41.25px`
+    gridElement.style.height = `${(660/(parseInt(gridSize.value)).toFixed(2))}px`
+    gridElement.style.width = `${(660/(parseInt(gridSize.value)).toFixed(2))}px`
 }
 
     /*gridElement.style.height = `${gridSize.value}px`
@@ -31,6 +30,7 @@ const createGridElement = () => {
 const gridSizeValue = () => {
     console.log(gridSize.value);
     gridSizeDisplay.innerHTML = `<span>${gridSize.value}x${gridSize.value}</span>`
+    console.log(660/(parseInt(gridSize.value)).toFixed(2))
 }
 
 createGrid();
