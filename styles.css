@@ -1,8 +1,8 @@
-*,
+/**,
 *::before,
 *::after {
     outline: 1px solid green;
-}
+}*/
 
 body {
     width: 100%;
@@ -51,16 +51,25 @@ body {
     outline: 0.25px solid rgba(126, 126, 126, 0.2);
 }
 
-.grid-element-background {
-    background-color: black;
-}
-
 .buttons-container {
     display: flex;
     flex-direction: column;
     background-color: aqua;
     box-shadow:  5px 5px 5px gray;
     border-radius: 5px;
+}
+
+.display-container {
+    padding: 1rem;
+    background-color: aliceblue;
+    margin: 1rem;
+    border-radius: 5px;
+    outline: 1px solid black;
+    font-weight: bold;
+}
+
+#grid-size {
+    display: flex;
 }
 
 button {
@@ -88,20 +97,14 @@ button:hover {
     box-shadow:  2px 2px 5px gray;
 }
 
-/*#clear:active {
+button:active {
     border: 1px solid black;
     transform: scale(1);
-    margin: 50px;
-    padding: 5px 15px;
+    /*margin: 50px;
+    padding: 5px 15px;*/
     color: black;
     font-weight: bolder;
     background-color: white;
     border-radius: 5px;
     box-shadow:  2px 2px 5px gray;
-}*/
-
-footer {
-    padding: 1em;
-    color: black;
 }
-
