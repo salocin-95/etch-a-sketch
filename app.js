@@ -10,11 +10,8 @@ const gridSizeDisplay = document.querySelector(".grid-size-display");
 let size = parseInt(gridSize.value)
 
 const randomHue = () => {
-    return Math.floor(Math.random() * 255);
+    return Math.floor(Math.random() * 256);
 }
-
-/*const randomGreen = Math.floor(Math.random() * 255);
-const randomBlue = Math.floor(Math.random() * 255);*/
 
 const clearSketch = () => {
     document.querySelectorAll(".grid-element").forEach((element) => element.style.background = "none");
@@ -72,7 +69,6 @@ drawBtn.addEventListener("click", () => {
         if (event.target.matches(".grid-element")) {
             // event.target matches the div .grid-element mouseover
             event.target.style.background = "black"
-            // console.log("you clicked bro");
         }
     });
 });
@@ -82,10 +78,23 @@ rainbowBtn.addEventListener("click", () => {
         if (event.target.matches(".grid-element")) {
             // event.target matches the div .grid-element mouseover
             event.target.style.background = `rgb(${randomHue()}, ${randomHue()}, ${randomHue()})`
-            // console.log("you clicked bro");
         }
     });
 });
+
+/*shadowBtn.addEventListener("click", () => {
+    document.addEventListener("mouseover", (event) => {
+        let opacity = 0.1;
+        while (opacity < 1) {
+            opacity += 0.1
+            if (event.target.matches(".grid-element")) {
+                event.target.style.opacity = `${opacity}`
+            }
+        }
+    });
+});*/
+
+
 
 
 clearBtn.addEventListener("click", clearSketch);

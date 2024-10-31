@@ -4,6 +4,12 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h1 {
+    background: -webkit-linear-gradient(#52f154, #983aef);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -108,4 +114,6 @@ span {
 footer {
     width: 100%;
     color: #a8afb3;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
 }
