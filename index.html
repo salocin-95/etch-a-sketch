@@ -23,8 +23,10 @@
 
             <div class="options-container">
                 <div class="buttons-container">
-                    <input type="range" min="1" max="100" value="16" id="grid-size" oninput="createGrid()" ><br>
-                    <span>Grid Size: </span><span class="grid-size-display">16x16</span><br>
+                    <div class="display-container">
+                        <input type="range" min="1" max="100" value="16" id="grid-size" oninput="createGrid()" ><br>
+                        <span class="grid-text"><span>Grid Size: </span><span class="grid-size-display">16x16</span></span><br>    
+                    </div>
                     <button id="clear">CLEAR</button><br>
                     <button id="draw">DRAW</button><br>
                     <button id="eraser">ERASER</button><br>
@@ -36,7 +38,7 @@
         </main>
         
         <footer class="footer">
-            <span class="footer">Rodrigo © Nicolas</span>
+            Rodrigo © Nicolas
         </footer>
 
     </div>
