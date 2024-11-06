@@ -7,41 +7,41 @@ const rainbowBtn = document.getElementById("rainbow");
 const shadowBtn = document.getElementById("darken");
 const gridSize = document.getElementById("grid-size");
 const gridSizeDisplay = document.querySelector(".grid-size-display");
-let size = parseInt(gridSize.value)
+let size = parseInt(gridSize.value);
 
 const randomHue = () => {
     return Math.floor(Math.random() * 256);
-}
+};
 
 const clearSketch = () => {
     document.querySelectorAll(".grid-element").forEach((element) => element.style.background = "none");
-}
+};
 
 //Changes the size of the grid
 const createGrid = () => {
-    size = parseInt(gridSize.value)
+    size = parseInt(gridSize.value);
     divContainer.innerHTML = "";
     for (let i = 1; i <= size; i++) {  
         for (let j = 1; j <= size; j++) {
             createGridElement();
         };
     };
-    gridSizeDisplay.innerHTML = `<span>${size}x${size}</span>`
-}
+    gridSizeDisplay.innerHTML = `<span>${size}x${size}</span>`;
+};
 
 // Creates the grid element. Changes should be made to make the DOM update in batches
 const createGridElement = () => {
     const gridElement = document.createElement("div");
     gridElement.classList.add("grid-element");
     divContainer.appendChild(gridElement);
-    gridElement.style.height = `${(660/(size).toFixed(2))}px`
-    gridElement.style.width = `${(660/(size).toFixed(2))}px`
-}
+    gridElement.style.height = `${(660/(size).toFixed(2))}px`;
+    gridElement.style.width = `${(660/(size).toFixed(2))}px`;
+};
 
 // Changes the grid size value display
 const gridSizeValue = () => {
-    gridSizeDisplay.innerHTML = `<span>${gridSize.value}x${gridSize.value}</span>`
-}
+    gridSizeDisplay.innerHTML = `<span>${gridSize.value}x${gridSize.value}</span>`;
+};
 
 // If .grid-element is added to the DOM dynamically after the initial page load, the click event listener won’t attach. You can use event delegation for elements that are added later:
 
@@ -50,8 +50,7 @@ document.addEventListener("mouseover", (event) => {
     if (event.target.matches(".grid-element")) {
         // event.target matches the div .grid-element mouseover
         event.target.style.background = "black";
-        // console.log("you clicked bro");
-    }
+    };
 });
 
 eraserBtn.addEventListener("click", () => {
@@ -59,8 +58,7 @@ eraserBtn.addEventListener("click", () => {
         if (event.target.matches(".grid-element")) {
             // event.target matches the div .grid-element mouseover
             event.target.style.background = "none"
-            // console.log("you clicked bro");
-        }
+        };
     });
 });
 
@@ -69,7 +67,7 @@ drawBtn.addEventListener("click", () => {
         if (event.target.matches(".grid-element")) {
             // event.target matches the div .grid-element mouseover
             event.target.style.background = "black"
-        }
+        };
     });
 });
 
@@ -78,7 +76,7 @@ rainbowBtn.addEventListener("click", () => {
         if (event.target.matches(".grid-element")) {
             // event.target matches the div .grid-element mouseover
             event.target.style.background = `rgb(${randomHue()}, ${randomHue()}, ${randomHue()})`
-        }
+        };
     });
 });
 
@@ -93,9 +91,6 @@ rainbowBtn.addEventListener("click", () => {
         }
     });
 });*/
-
-
-
 
 clearBtn.addEventListener("click", clearSketch);
 createGrid();
